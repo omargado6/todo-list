@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+import { Theme } from '@radix-ui/themes';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Theme>
+      <div className="App">
+      </div>
+    </Theme>
+
   );
 }
 
