@@ -5,7 +5,7 @@ import MyApp from './MyApp';
 function App() {
   return (
     <Theme >
-      <MyApp />
+        <MyApp />
     </Theme>
 
   );
