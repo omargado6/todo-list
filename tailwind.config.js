@@ -1,4 +1,4 @@
-const { gray, blue, red, green, yellow, mauve, violet, blackA, skyDark } = require('@radix-ui/colors');
+const { gray, blue, red, green, yellow, mauve, violet, blackA, whiteA, skyDark } = require('@radix-ui/colors');
 
 module.exports = {
   content: [
@@ -19,6 +19,7 @@ module.exports = {
         ...mauve,
         ...violet,
         ...blackA,
+        ...whiteA,
         ...skyDark
       },
       keyframes: {

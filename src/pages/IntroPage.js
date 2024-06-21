@@ -11,4 +11,4 @@ function IntroPage() {
     )
 }
 
-export default IntroPage
+export default IntroPage;

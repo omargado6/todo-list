@@ -10,3 +10,7 @@
 @import "@radix-ui/colors/blue-dark.css";
 @import "@radix-ui/colors/green-dark.css";
 @import "@radix-ui/colors/red-dark.css";
+
+.btn-defult {
+    @apply bg-sky5 text-white hover:bg-sky7 focus:shadow-sky7 inline-flex h-[35px] items-center justify-center rounded-[8px] px-[13px] leading-none shadow-3xl focus:shadow-[0_0_0_2px] focus:outline-none;
+}
