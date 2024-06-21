@@ -14,7 +14,7 @@ function SignIn() {
     return (
         <Dialog.Root>
             <Dialog.Trigger>
-                <button className="text-sky7 shadow-blackA4 hover:text-sky6 inline-flex h-[44px] min-sm:h-[35px] items-center justify-center rounded-[7px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-transparent focus:outline-none">
+                <button className="text-sky7 shadow-blackA4 hover:text-sky6 inline-flex h-[44px] min-sm:h-[35px] items-center justify-center rounded-[7px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-transparent focus:outline-none hover:scale-150 duration-500">
                     Sign In
                 </button>
             </Dialog.Trigger>
@@ -43,7 +43,7 @@ function SignIn() {
                             <button
                                 type="submit"
                                 onClick={() => navigate('/main')}
-                                className="btn-defult">
+                                className="btn-defult hover:scale-105 transition-all">
                                 Submit
                             </button>
                         </Dialog.Close>
