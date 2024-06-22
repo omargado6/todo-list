@@ -23,13 +23,13 @@ function MainPage() {
                 {/* to do */}
                 <div className="m-auto pt-5 pl-5 max-sm:p-1 w-5/12 max-[900px]:w-10/12 h-4/6 max-[900px]:h-3/6 overflow-auto bg-white rounded-[10px] shadow-3xl hover:scale-110 duration-500">
                     <h4 className="text-sky7 pb-3 text-lg font-medium">🎯 To Do</h4>
-                    <div className="h-4/5 px-3 overflow-auto">
+                    <div className="h-4/5 px-1 pl-3 overflow-auto">
                         <ToDoList />
                     </div>
                 </div>
                 <div className="m-auto p-5 max-sm:p-1 w-5/12 max-[900px]:w-10/12 h-4/6 max-[900px]:h-3/6 overflow-auto bg-white rounded-[10px] shadow-3xl hover:scale-110 duration-500">
                     <h4 className="text-sky7 pb-3 text-lg font-medium">✅ Done</h4>
-                    <div className="h-4/5 px-3 overflow-auto">
+                    <div className="h-4/5 px-2 pl-4 overflow-auto">
                         <DoneList />
                     </div>
                 </div>
