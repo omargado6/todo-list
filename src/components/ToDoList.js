@@ -1,19 +1,18 @@
 import { Badge } from '@radix-ui/themes';
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 function ToDoList() {
-    const Todolists = [
-        { id: 1, title: "Mathematics Basics", category: "Study" },
-        { id: 2, title: "Introduction to Physics", category: "science" },
-        { id: 3, title: "History of Ancient Civilizations", category: "history" },
-        { id: 4, title: "Chemistry 101 hi omar how", category: "science" },
-        { id: 5, title: "Biology Fundamentals", category: "biology" }
-    ];
+   
+    const Todolists = useSelector((state) => state.addTask);
+
+    
+
     return (
         <div className="ToDoList">
             <ul className="py-2 max-[355px]:w-max">
-                {Todolists.map((ele) => (
-                    <li id={ele.id} className="py-4 px-1 flex gap-1 w-full   shadow-3xl rounded-lg hover:-translate-y-1 duration-300">
+                {Todolists.map((ele,index) => (
+                    <li key={index} className="py-4 px-1 flex gap-1 w-full   shadow-3xl rounded-lg hover:-translate-y-1 duration-300">
                         <text className="text-sky3 font-serif max-sm:text-xs pl-1 text-left w-8/12 ">{ele.title}</text>
                         <Badge color="indigo" size="2" variant="soft" className="rounded-lg text-center font-medium max-sm:text-xs w-max justify-center">{ele.category}</Badge>
                         <div className="grid grid-cols-3 w-max gap-2 m-auto pr-1">
