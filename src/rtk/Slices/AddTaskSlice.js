@@ -8,8 +8,6 @@ export const AddTaskSlice = createSlice({
             state.push(action.payload);
         }, deleteTask: (state, action) => {
             return state.filter((state) => state.title !== action.payload.title);
-        }, clear: () => {
-            return [];
         }
     }
 });
