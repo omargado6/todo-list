@@ -1,16 +1,25 @@
-import React, { useContext } from "react";
+import React from "react";
 import * as Dialog from '@radix-ui/react-dialog';
 import { useNavigate } from "react-router-dom";
-import { UserName } from "../pages/UserNameProvider";
+import { useDispatch, useSelector } from "react-redux";
+import { setUserName } from "../rtk/Slices/UserNameSlice";
 
 function SignIn() {
-    const { name, setName } = useContext(UserName);
+    const name = useSelector((state) => state.userName);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleNameChange = (event) => {
-        setName(event.target.value);
+        dispatch(setUserName(event.target.value));
     };
 
+    const handleSubmit = () => {
+        if (name.trim()) {
+            navigate('/main');
+        } else {
+            window.alert("Please enter your name");
+        }
+    }
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -42,7 +51,7 @@ function SignIn() {
                         <Dialog.Close>
                             <button
                                 type="submit"
-                                onClick={() => navigate('/main')}
+                                onClick={handleSubmit}
                                 className="btn-defult hover:scale-105 transition-all">
                                 Submit
                             </button>

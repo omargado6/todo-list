@@ -1,17 +1,16 @@
-import React, { useContext } from 'react';
-import { UserName } from '../pages/UserNameProvider';
+import React from 'react';
 import AddTask from '../components/AddTask';
 import ToDoList from '../components/ToDoList';
 import DoneList from '../components/DoneList';
+import { useSelector } from 'react-redux';
 
 function MainPage() {
-    const { name } = useContext(UserName);
-
+    const name = useSelector(state => state.userName)
     return (
         <div className="bg-sky4 w-screen h-screen flex flex-wrap justify-around m-auto p-2 pb-5 gap-1">
             {/* task label */}
             <div className="w-5/6 h-2/6 flex m-auto">
-                <div className="w-full bg-white flex flex-col gap-3 m-auto p-5 max-sm:p-1 rounded-[10px] shadow-3xl">
+                <div className="w-full bg-white flex flex-col gap-3 m-auto p-5 max-sm:p-3 rounded-[10px] shadow-3xl">
                     <h1 className="text-sky7 text-xl font-medium">Welcome <span className="font-bold font-serif">{name}...</span></h1>
                     <div className="pl-10 max-sm:px-5">
                         <AddTask />
@@ -34,7 +33,6 @@ function MainPage() {
                     </div>
                 </div>
             </div>
-            {/* <h1>{name}</h1> */}
         </div>
     );
 }
