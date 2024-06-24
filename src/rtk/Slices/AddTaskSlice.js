@@ -6,9 +6,13 @@ export const AddTaskSlice = createSlice({
     reducers: {
         addTask: (state, action) => {
             state.push(action.payload);
+        }, deleteTask: (state, action) => {
+            return state.filter((state) => state.title !== action.payload.title);
+        }, clear: () => {
+            return [];
         }
     }
 });
 
-export const { addTask } = AddTaskSlice.actions;
+export const { addTask, deleteTask, clear } = AddTaskSlice.actions;
 export default AddTaskSlice.reducer;
